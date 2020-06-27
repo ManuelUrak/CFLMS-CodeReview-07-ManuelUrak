@@ -1,0 +1,17 @@
+<h1>Places to check-out</h1>
+
+<div class="blog-content">
+	<div class=posts *ngFor="let blogpost of blogposts">
+		<h3>
+			{{ blogpost.name }}
+		</h3>
+		<div class="img-con">
+			<img src="{{ blogpost.image }}" alt="image">
+		</div>
+		<article>
+			<p>
+				{{ blogpost.text }}
+			</p>
+		</article>
+	</div>	
+</div>

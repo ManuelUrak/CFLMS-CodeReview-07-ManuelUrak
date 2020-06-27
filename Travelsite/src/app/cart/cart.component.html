@@ -1,0 +1,44 @@
+<h1>Your Cart</h1>
+
+<div class="cart-content">
+	<div class="cart-items" *ngFor="let item of items">
+		<h3>
+			{{ item.name }}
+		</h3>
+		<h4>
+			{{ item.place }}
+		</h4>
+		<p>
+			{{ item.price }} €/per night
+		</p>
+	</div>
+
+	<div class="price">
+		<h3>
+			{{ fullPrice }} € total
+		</h3>
+	</div>
+	<form class="form" [formGroup]="checkoutForm" (ngSubmit)="onSubmit(checkoutForm.value)">
+
+		 <div class="form-row">
+		   <label for="name">
+		     Name
+		   </label>
+		   <input id="name" type="text" formControlName="name">
+		 </div>
+
+		 <div class="form-row">
+		   <label for="address">
+		     Address
+		   </label>
+		   <input id="address" type="text" formControlName="address">
+		 </div>
+
+		 <button class="purchase" type="submit">Purchase</button>
+
+	</form>
+	<div class="foot-note">
+		<h1>Please visit us again...</h1>
+	</div>
+	
+</div>

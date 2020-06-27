@@ -1,0 +1,28 @@
+<h1>Our offers for you</h1>
+
+<div class="travel-content">
+	<div class="product-card" *ngFor="let product of products">
+		<div class="img-con2">
+			<img src=" {{ product.image }}" alt="product">
+		</div>
+		<div class="info-column">
+			<h3>
+				{{ product.name }}
+			</h3>
+			<div class="place">
+				<div class="icon">
+					<img src="assets/Images/marker.webp" alt="icon">
+				</div>
+				<h2>
+					{{ product.place }}
+				</h2>
+			</div>
+			<div class="pay">
+				<button class="price">
+					{{ product.price }} €/per night
+				</button>
+				<button class="cart" (click)="addToCart(product)">Add to cart</button>
+			</div>
+		</div>
+	</div>
+</div>
